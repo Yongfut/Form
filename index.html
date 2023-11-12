@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="insert.php" method="POST">
+        <div>
+            <label for="">Guardian Name</label>
+            <input type="text" name="guardian_name" id="guardian_name" placeholder="Input_GuardianName">
+        </div>
+        <div>
+            <label for="">Ralation</label>
+            <input type="text" name="ralation" id="ralation" placeholder="Ralation">
+        </div>
+        <div>
+            <label for="">Guardian_Phone</label>
+            <input type="text" name="guardian_phone" id="guardian_phone" placeholder="Input_Phone Guardian">
+        </div>
+        <div>
+            <label for="">Fullname</label>
+            <input type="text" name="student_name" id="student_name" placeholder="Input_Name">
+        </div>
+        <div>
+            <label for="">Gender</label>
+            <input type="text" name="gender" id="gender" placeholder="gender">
+        </div>
+        <input type="submit" name="submit" value="submit">
+    </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="Asset/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>Rigister</title>
+</head>
+<body>
+  <header style="background-color: rgb(35, 204, 19);">
+           <img src="https://spi.edu.kh/assets/img/SPI_Logo2.png" style="width: 200px;">
+  </header>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="" data-toggle="modal" data-target="#rigister">
+        <!-- <a href="" class="btn btn-warning" data-toggle="modal" data-target="#view">View Profile</a> -->
+            <!-- <i class="fas fa-fw fa-wrench"></i> -->
+           <u style="color: rgb(0, 0, 0);"> <h3 style="text-align: center;  color: rgb(35, 204, 19);">​ពាក្យសុំស្នាក់នៅ មណ្ឌល</h3></u>
+        </a>
+        <div class="modal fade" id="rigister"  role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="userModalLabel">​ពាក្យសុំស្នាក់នៅ</h5>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<form action="Studentss/RigisterStudents.php" method="POST">
+  
+  <div class="form-group">
+    <label for="FullName"><u>ឈ្មោះអាណាព្យាបាល</u></label>
+    <input type="text" name="guardian_name" class="form-control" id="guardian_name" required placeholder="ឈ្មោះអាណាព្យាបាល">
+  </div><br>
+  <div class="form-group">
+    <div class="form-group">
+        <label for="must be"><u>ត្រូវជា</u> </label>
+        <input type="text" name="ralation" class="form-control" id="ralation" required placeholder="ត្រូវជាអ្វីនឹងសាមីខ្លួន">
+      </div><br>
+      <div class="form-group">
+        <div class="form-group">
+            <label for="Phone"><u>លេខទូរស័ព្ទ អាណាព្យាបាល</u></label>
+            <input type="text" name="guardian_phone" class="form-control" id="guardian_phone" required placeholder="លេខទូរស័ព្ទ អាណាព្យាបាល">
+          </div>
+    <!-- <select class="form-select form-select-sm" id="skills" name="ralation" required>
+      
+        <option value="no select"  selected disabled >ត្រូវជាអ្វីនឹងសាមីខ្លួន</option>
+        <option value="ព័ត៍មានវិទ្យា">ឪពុក</option>
+        <option value="អក្សរសាស្រ្តអង់គ្លេស់">ម្តាយ</option>
+        <option value="គ្រប់គ្រងទេសចរណ៍">តា</option>
+        <option value="ក្សេត្រសាស្រ្ត">យាយ</option>
+        <option value= "សង្គមកិច្ច">អ៊ុប្រុស</option>
+        <option value="សង្គមកិច្ច">អ៊ុំស្រី</option>
+        <option value="សង្គមកិច្ច">មីង</option>
+        <option value="សង្គមកិច្ច">ពូ</option>
+        <option value="សង្គមកិច្ច">បងប្រុស</option>
+        <option value="សង្គមកិច្ច">បងស្រី</option>
+        <option value="សង្គមកិច្ច">ប្អូនប្រុស</option>
+        <option value="សង្គមកិច្ច">ប្អូនស្រី</option>
+        
+     </select> -->
+  </div><br>
+  <div class="form-group">
+    <label for="FullName"><u>ឈ្មោះសមីខ្លួន</u></label>
+    <input type="text" name="student_name" class="form-control" id="email" required placeholder="ឈ្មោះសមីខ្លួន">
+  </div><br>
+  <div class="form-group">
+    <label for="Phone"><u>ថ្ងៃខែឆ្នាំកំណើត</u></label>
+    <input type="date" name="dob_student" id="dob_student">
+  </div><br>
+ 
+  <div class="form-group">
+    <label for="Gender"><u>ភេទ</u></label><br>
+    <select class="form-select form-select-sm" aria-label="Default select example" id="gender" name="gender" required>
+        
+          <option value="Male">ប្រុស</option>
+          <option value="Female">ស្រី</option>
+          
+        </select>
+  </div><br>
+  <div class="form-group">
+    <label for="Major"><u>ជ្រើសរើស មុខជំនាញ</u></label><br>
+    <select class="form-select form-select-sm" id="skill" name="skill" required>
+        <!-- <option value="">Select Skills</option> -->
+      
+        <option value="ព័ត៍មានវិទ្យា">ព័ត៍មានវិទ្យា(IT)</option>
+        <option value="អក្សរសាស្រ្តអង់គ្លេស់">អក្សរសាស្រ្តអង់គ្លេស់(English)</option>
+        <option value="គ្រប់គ្រងទេសចរណ៍">គ្រប់គ្រងទេសចរណ៍(ទេសចរណ៍)</option>
+        <option value="ក្សេត្រសាស្រ្ត">ក្សេត្រសាស្រ្ត(កសិកម្ម)</option>
+        <option value="សង្គមកិច្ច">សង្គមកិច្ច</option>
+        <!-- <option value="other">Other</option> -->
+     </select>
+  </div><br>
+  <div class="form-group">
+    <label for="Phone"><u>ទីលំនៅបច្ចុប្បន្ន</u></label>
+    <input type="text" name="phone" class="form-control" id="phone" required placeholder="ភូមិ">
+    <input type="text" name="phone" class="form-control" id="phone" required placeholder="ឃុំ">
+    <input type="text" name="phone" class="form-control" id="phone" required placeholder="ស្រុក">
+    <input type="text" name="phone" class="form-control" id="phone" required placeholder="ខេត្ត / ទីក្រុង">
+</div><br>
+  <div class="form-group">
+    <label for="Phone"><u>ហេតុផលចង់ស្នាក់នៅ</u></label>
+    <input type="text" name="phone" class="form-control" id="phone" required placeholder="ហេតុផលចង់ស្នាក់នៅ">
+  </div><br>
+  <div class="form-group">
+    <label for="Phone"><u>ឆ្នាំទី </u></label>
+    <select class="form-select form-select-sm" id="skills" name="skills" required>
+        <!-- <option value="">Select Skills</option> -->
+      
+        <option value="ព័ត៍មានវិទ្យា">១</option>
+        <option value="អក្សរសាស្រ្តអង់គ្លេស់">២</option>
+        <option value="គ្រប់គ្រងទេសចរណ៍">៣</option>
+        <option value="ក្សេត្រសាស្រ្ត">៤</option>
+        
+        <!-- <option value="other">Other</option> -->
+     </select>
+  </div><br>
+  <div class="form-group">
+    <label for="Phone"><u>ឆ្នាំសិក្សា</u></label>
+    <select class="form-select form-select-sm" id="skills" name="skills" required>
+        <!-- <option value="">Select Skills</option> -->
+      
+        <option value="ព័ត៍មានវិទ្យា">២០២៤-២០២៥​ </option>
+        <option value="អក្សរសាស្រ្តអង់គ្លេស់">២០២៥-២០២៦</option>
+        <option value="គ្រប់គ្រងទេសចរណ៍">២០២៦-២០២៧</option>
+        <option value="ក្សេត្រសាស្រ្ត">២០២៧-២០២៨</option>
+        
+        <!-- <option value="other">Other</option> -->
+     </select>
+  </div><br>
+  <div class="form-group">
+    <label for="Phone"><u>អីម៉ែល</u></label>
+    <input type="email" name="email" class="form-control" id="phone"  placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="Image"><u>Image</u></label>
+    <input type="file" name="student_image" class="form-control" id="student_image"  ">
+  </div>
+  
+  <!-- <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" name="new_username" class="form-control" id="username" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" name="new_password" class="form-control" id="password" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="new_email" class="form-control" id="email" required>
+  </div>
+ -->
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">បិទ</button>
+<input type="submit" class="btn btn-success " name="button" value="ដាក់ស្នើ">
+</div>
+</div>
+</div>
+</div>
+</form>
+</li>
+</body>
+</html>
